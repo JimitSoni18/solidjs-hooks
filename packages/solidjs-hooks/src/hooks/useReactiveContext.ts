@@ -12,5 +12,5 @@ export function useReactiveContext<T extends object, A = any>(
 		setState((prev) => reducer(prev, action));
 	}
 
-	return [Context, dispatch] as const;
+	return [Context, dispatch, state] as const;
 }
